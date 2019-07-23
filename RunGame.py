@@ -38,7 +38,8 @@ while True:
 
             if game.isWinner(theBoard, playerLetter):
                 game.drawBoard(theBoard)
-                print('Player 1 wins the game!')
+                print('\033[1m' + 'Player 1 wins the game!')
+                print('\033[0m')
                 gameIsPlaying = False
             else:
                 if game.isBoardFull(theBoard):
@@ -55,7 +56,8 @@ while True:
 
             if game.isWinner(theBoard, computerLetter):
                 game.drawBoard(theBoard)
-                print('Player 2 wins the game!')
+                print('\033[1m' + 'Player 2 wins the game!')
+                print('\033[0m')
                 gameIsPlaying = False
             else:
                 if game.isBoardFull(theBoard):
