@@ -1,4 +1,6 @@
 import random
+import time
+theBoard = [' '] * 10
 class ticTacToe:
 
     def drawBoard(self, board):
@@ -16,6 +18,34 @@ class ticTacToe:
         print('   |   |')
         print(' ' + board[1] + ' | ' + board[2] + ' | ' + board[3])
         print('   |   |')
+
+    def howToPlay(self):
+        #explains how to play the game
+        print('In Tic-Tac-Toe, you win the game by getting three of your symbol (X or O) in a row.')
+        print('This group of three can be horizontal, vertical, or diagonal. (Press enter to continue)')
+        input()
+        print('This is what the Tic-Tac-Toe board will look like.')
+        time.sleep(2)
+        ticTacToe.drawBoard(self, theBoard)
+        print('(Press enter to continue)')
+        input()
+        print('To place your symbol in one of the open spaces, type a number between 1-9.')
+        print('The following describes where each number corresponds to.')
+        time.sleep(2)
+        print('   |   |')
+        print(' ' + '7' + ' | ' + '8' + ' | ' + '9')
+        print('   |   |')
+        print('-----------')
+        print('   |   |')
+        print(' ' + '4' + ' | ' + '5' + ' | ' + '6')
+        print('   |   |')
+        print('-----------')
+        print('   |   |')
+        print(' ' + '1' + ' | ' + '2' + ' | ' + '3')
+        print('   |   |')
+        time.sleep(2)
+        print('(When you are ready to begin, press enter)')
+        input()
 
     def inputPlayerLetter(self):
         # Lets the player type which letter they want to be.
